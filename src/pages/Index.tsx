@@ -18,7 +18,7 @@ const Index = () => {
       <nav className="relative z-50 px-4 py-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold text-white">
-            ViewBoost<span className="text-red-500">Pro</span>
+            <span className="text-red-500">PEEK</span>Q
           </div>
           
           {/* Desktop Navigation */}

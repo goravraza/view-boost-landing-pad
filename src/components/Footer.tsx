@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold text-white mb-4">
-              ViewBoost<span className="text-red-500">Pro</span>
+              <span className="text-red-500">PEEK</span>Q
             </div>
             <p className="text-white/70 mb-6">
               The most trusted YouTube growth service for creators and businesses worldwide.
@@ -53,8 +53,8 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-white/70">
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Refund Policy</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
             </ul>
@@ -74,7 +74,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-white/50 text-sm">
-          <p>&copy; 2024 ViewBoostPro. All rights reserved.</p>
+          <p>&copy; 2024 PEEKQ. All rights reserved.</p>
           <p className="mt-2">
             Disclaimer: This service uses YouTube's advertising platform to promote videos. 
             Results may vary based on content quality and targeting.

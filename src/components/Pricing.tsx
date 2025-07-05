@@ -3,62 +3,50 @@ import { Button } from "@/components/ui/button";
 import { Check, Star, Zap } from "lucide-react";
 
 export const Pricing = () => {
+  const handleOrderNow = (packageName: string) => {
+    const message = `Hi! I'm interested in ordering the ${packageName} package. Please provide more details.`;
+    const whatsappUrl = `https://wa.me/919878895926?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const plans = [
     {
-      name: "Starter",
-      price: 29,
-      views: "5,000",
+      name: "100K YouTube Skip Ads Views",
+      price: "4,000",
+      currency: "₹",
+      views: "100K",
       popular: false,
       features: [
-        "5,000 real YouTube views",
-        "24-48 hour delivery",
-        "Basic targeting",
-        "Email support",
-        "Money back guarantee"
+        "Worldwide/Targeted Views",
+        "Real Views Through Ads",
+        "Complete under 72 Hours",
+        "Ads Reports Available"
       ]
     },
     {
-      name: "Growth",
-      price: 79,
-      views: "15,000",
+      name: "500K YouTube Skip Ads Views",
+      price: "16,000",
+      currency: "₹",
+      views: "500K",
       popular: true,
       features: [
-        "15,000 real YouTube views",
-        "12-24 hour delivery",
-        "Advanced targeting",
-        "Priority support",
-        "Analytics dashboard",
-        "Money back guarantee"
+        "Worldwide/Targeted Views",
+        "Real Views Through Ads",
+        "Complete under 72 Hours",
+        "Ads Reports Available"
       ]
     },
     {
-      name: "Pro",
-      price: 199,
-      views: "50,000",
+      name: "1M YouTube Skip Ads Views",
+      price: "30,000",
+      currency: "₹",
+      views: "1M",
       popular: false,
       features: [
-        "50,000 real YouTube views",
-        "6-12 hour delivery",
-        "Premium targeting",
-        "24/7 priority support",
-        "Advanced analytics",
-        "Campaign optimization",
-        "Money back guarantee"
-      ]
-    },
-    {
-      name: "Enterprise",
-      price: 499,
-      views: "150,000",
-      popular: false,
-      features: [
-        "150,000 real YouTube views",
-        "Instant delivery start",
-        "Custom targeting",
-        "Dedicated account manager",
-        "White-label reporting",
-        "A/B testing included",
-        "Money back guarantee"
+        "Worldwide/Targeted Views",
+        "Real Views Through Ads",
+        "Complete under 72 Hours",
+        "Ads Reports Available"
       ]
     }
   ];
@@ -68,15 +56,15 @@ export const Pricing = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Choose Your Growth Plan
+            YouTube Skip Ads Views Packages
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Flexible pricing options to fit every creator's needs and budget. 
-            All plans include real views from genuine YouTube users.
+            Get real YouTube views through skip ads campaigns. 
+            All packages include worldwide/targeted options and detailed reports.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -96,9 +84,9 @@ export const Pricing = () => {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-4 leading-tight">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="text-4xl md:text-5xl font-bold text-white">${plan.price}</span>
+                  <span className="text-4xl md:text-5xl font-bold text-white">{plan.currency}{plan.price}</span>
                   <span className="text-white/60 ml-2">one-time</span>
                 </div>
                 <div className="text-red-400 font-semibold text-lg mb-6">
@@ -116,6 +104,7 @@ export const Pricing = () => {
               </ul>
 
               <Button
+                onClick={() => handleOrderNow(plan.name)}
                 className={`w-full py-3 text-lg font-semibold ${
                   plan.popular
                     ? "bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white shadow-2xl hover:shadow-red-500/25"
@@ -123,7 +112,7 @@ export const Pricing = () => {
                 } transition-all duration-300`}
               >
                 {plan.popular && <Zap className="w-5 h-5 mr-2" />}
-                Get Started
+                Order Now
               </Button>
             </div>
           ))}
@@ -132,20 +121,20 @@ export const Pricing = () => {
         {/* Additional info */}
         <div className="text-center mt-12">
           <p className="text-white/70 mb-4">
-            Need more than 150,000 views? Contact us for custom enterprise solutions.
+            Need custom packages or bulk orders? Contact us directly on WhatsApp.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
             <div className="flex items-center">
               <Check className="w-4 h-4 text-green-400 mr-2" />
-              30-day money back guarantee
+              Real YouTube ad views
             </div>
             <div className="flex items-center">
               <Check className="w-4 h-4 text-green-400 mr-2" />
-              No monthly contracts
+              72-hour delivery
             </div>
             <div className="flex items-center">
               <Check className="w-4 h-4 text-green-400 mr-2" />
-              SSL secured checkout
+              Detailed reports included
             </div>
           </div>
         </div>
